@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./pages/Home"
+import Dashboard from "./pages/Dashboard"
+import Onboard from "./pages/Onboard"
+import {BrowserRouter,Routes,Route} from "react-router-dom"
+import { useCookies } from 'react-cookie'
 
-function App() {
+
+const App=()=> {
+
+  const[cookie,setCookie,removeCookie] = useCookies(['user'])
+
+  const authToken = cookie.Authtoken
+  console.log('AuthToken:', authToken);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+    <Routes>
+      <Route path={"/"} element={<Home/>}/>
+      {authToken &&<Route path={"/dashboard"} element={<Dashboard/>}/>}
+      {authToken &&<Route path={"/onboard"} element={<Onboard/>}/>}
+    </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App

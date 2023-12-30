@@ -1,13 +1,426 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&display=swap');
+
+html,body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h2{
+    font-style: italic;
+}
+* {
+    font-family: 'Readex Pro', 'sans-serif';
+}
+
+.home{
+    display:inline-block;
+}
+
+.primary-title {
+    font-size: 75px; /* Adjust the font size as needed */
+    margin-bottom: 20px; /* Add or remove margin based on your design */
+    color: #333; /* Set your desired text color */
+    font-weight: bold; /* Adjust the font weight if needed */
+    text-align: center; /* Center the text */
+    text-transform: uppercase; /* Convert text to uppercase if desired */
+    letter-spacing: 1px; /* Adjust letter spacing for better readability */
+  }
+
+.primary-button {
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+    background: linear-gradient(45deg, brown,rgb(203, 9, 41)) ;;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+}
+
+.primary-button:hover {
+    background: linear-gradient(260deg, #fe3072, #ff5948);
+}
+
+.secondary-button {
+    color: grey;
+    background-color: white;
+    font-weight: 500px;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: solid 2px black;
+    margin: 6px;
+}
+
+.secondary-button:hover{
+    color:black;
+    border: solid 2px red;
+}
+
+/*--------nav----*/
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .nav-button {
+    color: white;
+    height: 40px;
+    background: linear-gradient(45deg, brown,rgb(203, 9, 41)) ;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    margin: 40px;
+}
+
+nav .nav-button:hover {
+    color: white;
+    background: #ff5948;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Adjust the margin as needed */
+  }
+  
+.logo {
+    width: 150px; /* Set the width of your logo */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 5px;
+    filter: brightness(1.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0.9; /* Optional: Add border-radius for rounded corners */
+  }
+  
+  
+.nav-button:disabled {
+    opacity: 0.5; /* Optional: Reduce opacity for disabled state */
+    cursor: not-allowed;
+  }
+  
+
+/*------homepage-----*/
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.65) 0%,
+            rgba(0, 0, 0, 0) 100%);
+    background-image: url('C:\Users\cnb\project(happy deepali)\client\src\images\10510132201.png');
+    background-size:  cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/*-----authmodal----*/
+/* Assuming you have a class "auth-modal" for your modal and "close-icon" for the close button */
+
+  
+.close-icon {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+.secondary-button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+.secondary-button:hover {
+    background-color: #2980b9;
+  }
+  
+.error-message {
+    color: red;
+    margin-top: 10px;
+  }
+
+.auth-modal {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    
+}
+
+.auth-modal .close-icon{
+    float: right ;
+}
+
+.auth-modal form{
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-modal input[type=password],
+.auth-modal input[type=email],
+.auth-modal input[type=password-check]{
+    padding: 8px;
+    margin: 8px;
+    font-size: 17px;
+}
+*/
+
+/*-----onboard----*/
+.Onboard{
+    border-top: solid 1px darkcyan;
+    
+}
+.Onboard form{
+    display: flex;
+    justify-content: center; 
+}
+
+.Onboard form section{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    text-align: start;
+}
+
+.Onboard form input{
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 15px;
+    border: solid 2px bisque;
+    border-radius: 10px;
+}
+
+.Onboard form label
+{
+    margin:10px 0;
+}
+.Onboard form .multiple-input-container
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.Onboard form input::-webkit-inner-spin-button,
+.Onboard form input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.Onboard form .multiple-input-container input{
+    margin-right: 10px;
+}
+
+.Onboard form .multiple-input-container label{
+    padding: 10px;
+    border: solid 2px bisque;
+    border-radius: 10px;
+    transition: all 0.3s;
+    margin-right: 10px;
+}
+
+.Onboard form input[type=radio]
+{
+    display: none;
+}
+
+.Onboard form input[type=number]
+{
+    width: 10%;
+}
+
+.Onboard form input[type=radio]:checked + label
+{
+    border: solid 2px darkcyan;
+}
+
+.Onboard form input[type=submit]:hover
+{
+    background-color: bisque;
+}
+
+.Onboard form input[type=submit]:active
+{
+    background-color: darkcyan;
+}
+
+.Onboard form .photo-container img{
+    width: 500px;
+    height: 500px;
+    background-size: cover;
+}
+
+.Onboard form .project {
+    white-space: pre-line;
+    page-break-inside: avoid;
+    flex-direction: column;
+}
+/*----------dashboard-------*/
+
+.dash {
+    display: flex;
+    justify-content: space-between;
+    background-color: lightcyan;
+}
+
+.dash .swipe-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.swipe {
+    position: absolute;
+}
+
+.dash .card-container {
+    width: 400px;
+    height: 650px;
+}
+
+.card {
+    width: 400px;
+    height: 650px;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.dash .swipe-info {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+}
+  
+.bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)); /* Gradient for a fading effect */
+    color: white;
+    text-align: left;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+.bottom-left p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  /* Optional: Add a smooth transition effect */
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+
+.swipe-info{  position: fixed;
+    top: 20px;
+    right: 20px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 2;
+}
+/*--------------chat container------*/
+
+.chat-container{
+    background-color: white;
+    box-shadow: rgba(0,0,0,0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    width: 30%;
+    text-align: left;
+    z-index: 1;
+}
+
+.chat-container .chat-container-header
+{
+    background: linear-gradient(45deg,darkcyan,white);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-container .option {
+    border: none;
+    background-color: white;
+    border-bottom: solid 4px skyblue;
+    font-size: 20px;
+    margin:2px;
+    padding: 10px;
+}
+
+.chat-container .option:disabled {
+    border-bottom: grey;
+}
+
+.chat-container .profile,
+.chat-container .log-out-icon
+{
+    display: flex;
+    align-items: center;
+    color: black;
+    padding: 20px;
+}
+
+.img-container {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.img-container img{
+    width: 100%;
+}
+
+/*------chatdisplay----*/
+
+.chat-display,
+.matches-display {
+    padding: 20px;
+    height: 60vh;
+    overflow-y: auto;
+}
+
+/*------------chatinput--------*/
+.chat-input
+{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
